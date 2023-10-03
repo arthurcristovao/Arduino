@@ -1,7 +1,7 @@
 #include <Servo.h>
  
-#define SERVO 6 // Porta Digital 6 PWM
-#define ANGULO 100
+#define SERVO 6 
+#define ANGULO 105
 #define botao 7
 
 int valorBotao = 0;
@@ -9,7 +9,7 @@ int ativado = 0;
 
 Servo s; // Variável Servo
 int pos; // Posição Servo
- 
+
 void setup ()
 {
   pinMode(botao, INPUT);
@@ -27,7 +27,7 @@ void loop()
   if(valorBotao == 1 ){
     for(pos = 0; pos < ANGULO; pos++){
         s.write(pos);
-        delay(3);
+        delay(7);
     }
       ativado++;
     delay(1000);
@@ -37,7 +37,7 @@ void loop()
     delay(2000);
     for(pos = ANGULO; pos >= 0; pos--){
         s.write(pos);
-        delay(3);
+        delay(7);
       }
       ativado--;
   }

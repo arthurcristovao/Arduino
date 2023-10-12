@@ -40,7 +40,5 @@ void loop()
         delay(7);
       }
       ativado--;
-  }
-
-      
+  }    
 }
